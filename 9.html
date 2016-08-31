@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>let and const</title>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="box">
+      <h2>Max</h2>
+      <p class="social">
+        @max
+      </p>
+    </div>
+  </div>
+
+
+  <script>
+
+  const box = document.querySelector('.box');
+
+  // this is box
+  box.addEventListener('click', function() {
+    this.classList.toggle('opening');
+    // this is box because box is the parent scope and we're using arrow func!
+    setTimeout(() => {
+      this.classList.toggle('open');
+    }, 500)
+  });
+
+  // this is inherting from parent scope (Window)
+  box.addEventListener('click', () => {
+    console.log(this);
+  });
+
+  </script>
+
+</body>
+
+</html>

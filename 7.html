@@ -1,0 +1,43 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>let and const</title>
+</head>
+
+<body>
+
+  <script>
+  const names = ['max', 'kate', 'ali'];
+
+  const fullNames = names.map(function(name) {
+    return `${name} smith`;
+  });
+
+  const fullNamesArrow = names.map((name) => {
+    return `${name} jones`;
+  });
+
+  const fullNamesArrowOneArg = names.map(name => {
+    return `${name} jones`;
+  });
+
+  const fullNamesImplicitReturn = names.map(name => `${name} jones`);
+
+  const fullNamesNoArgs = names.map(() => `${name} jones`);
+
+  function namedFunction(name) {
+    alert(`Max ${name}`);
+  }
+
+  const namedFunctionConst = (name) => { alert(`${name}`) }
+
+  namedFunctionConst('max');
+
+  console.log();
+
+  </script>
+
+</body>
+
+</html>

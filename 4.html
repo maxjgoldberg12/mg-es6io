@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>let and const</title>
+</head>
+
+<body>
+
+  <script>
+  (function() {
+    var name = 'max';
+    console.log(name);
+  })();
+
+  {
+    const name = 'cheese';
+    console.log(name);
+  }
+
+  for (let i = 0; i < 10; i++) {
+    console.log(i);
+    setTimeout(function(){
+      console.log('number is ' + i)
+    }, 1000)
+  }
+
+  </script>
+
+</body>
+
+</html>

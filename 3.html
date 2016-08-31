@@ -6,6 +6,27 @@
 
   <script>
 
+  const key = 'abc';
+  let points = 50;
+  let winner = false;
+
+  if (points < 50) {
+    console.log("Less than 50");
+    let winner = true;
+  }
+
+  const person = {
+    name: 'Max',
+    age: 25
+  }
+
+  Object.freeze(person);
+
+
+  person.age = 200;
+
+  console.log(person);
+
 
   </script>
 

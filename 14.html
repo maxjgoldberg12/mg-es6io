@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Strings</title>
+</head>
+<body>
+
+  <script>
+
+  const max = {
+    name: 'max',
+    job: 'cool guy',
+    age: 25
+  }
+
+  const text = `
+  <h2 class="person">
+  ${max.name} is a ${max.job}
+  <p>${max.age}</p>
+  </h2>
+  `;
+
+  const dogs = [
+    { name: 'snoopy' },
+    { name: 'buddy' }
+  ];
+
+  const dogList = `
+  <ul class="dogs">
+    ${dogs.map(dog => `
+      <li>
+        This dog is
+        ${dog.name}
+      </li>`).join('')}
+  </ul>
+  `;
+
+  const song = {
+    name: 'Like A Hurricane',
+    artist: 'Neil Young',
+    year: 1970,
+    tags: ['rock', 'electric', 'oldies']
+  };
+
+  function renderTags(tags) {
+    return `
+    <ul>
+      ${tags.map(tag => `<li>${tag}</li>`).join('')}
+    </ul>
+    `;
+  }
+
+  const render = `
+  <div class="song">
+    <p>
+      ${song.name} - ${song.artist}
+      ${song.year ? `Year: ${song.year}` : ''}
+    </p>
+    <p>
+    ${renderTags(song.tags)}
+    </p>
+  </div>
+  `;
+
+  console.log(render);
+  document.body.innerHTML = render;
+
+  </script>
+
+
+</body>
+</html>

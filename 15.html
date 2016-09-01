@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tagged Templates</title>
+
+  <style>
+    .highlight {
+      background: #ffe344;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+
+  const max = {
+    name: 'max',
+    job: 'cool guy',
+    age: 25
+  }
+
+  function highlight(strings, ...values) {
+    let base = '';
+    debugger;
+    strings.forEach((string, index) => {
+      base += `${string} <span class="highlight">${values[index] || ''}</span>`
+    });
+    return base;
+  }
+
+  const text = highlight`My name is ${max.name} and I am ${max.age}`;
+
+  console.log(text);
+
+  document.body.innerHTML = text;
+
+  </script>
+
+
+</body>
+</html>

@@ -7,7 +7,51 @@
 
 <body>
 
+  <button class="button">
+    Push Me
+  </button>
+
+  <style>
+    button { }
+    .on { background: #0075ac; }
+  </style>
+
   <script>
+
+  // to get 'this' to be button
+  const button = document.querySelector('.button');
+  button.addEventListener('click', function() {
+    this.classList.toggle('on');
+  });
+
+  // method binds to person object using this
+  const person = {
+    points: 20,
+    score () {
+      this.points++
+    }
+  };
+
+  // Adding a prototype method that uses this
+  class Car {
+    constructor(make, color) {
+      this.make = make;
+      this.color = color;
+    }
+  }
+
+  const bmw = new Car('bmw', 'blue');
+
+  Car.prototype.summarize = function() {
+    return `This car is ${this.make}`
+  }
+
+
+  // Using the arguments object
+  const orderChildren = function() {
+    const children = Array.from(arguments);
+    console.log(children);
+  }
 
 
   </script>

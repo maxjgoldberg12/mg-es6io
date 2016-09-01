@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tagged Templates</title>
+
+  <style>
+    .highlight {
+      background: #ffe344;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bio">
+  </div>
+
+  <script>
+
+  const dict = {
+    MD: 'doctor',
+    PT: 'physical therapist',
+    EMT: 'emergency medical technician'
+  };
+
+  const first = 'Max';
+  const last = 'Goldberg';
+
+  function addAbbrev(strings, ...values) {
+    const abbreviated = values.map(value => {
+      if(dict[value]) {
+        return `<abbr title="${dict[value]}">${value}</abbr>`
+      }
+      return value;
+    });
+
+    return strings.reduce((sentence, string, index) => {
+      return `${sentence}${string}${abbreviated[index] || ''}`
+    });
+  }
+
+  const text = addAbbrev`Hello my name is ${first} ${last} and I am a ${'MD'} and ${'EMT'}`;
+
+  const bio = document.querySelector('.bio');
+  const p = document.createElement('p');
+  p.innerHTML = text;
+  bio.appendChild(p);
+
+  </script>
+
+
+</body>
+</html>

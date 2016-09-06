@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>18</title>
+</head>
+
+<body>
+
+  <div class="bio"></div>
+
+  <!-- Code here! -->
+  <script>
+  const frat = 'PhiDelt';
+  const bike = 'Fuji SLM 29';
+  const house = '119';
+
+  console.log(frat.startsWith(`Phi`));
+  console.log(bike.startsWith('SLM', 5));
+  console.log(bike.endsWith('29'));
+  console.log(house.includes('1'));
+  console.log(house.repeat(2));
+
+  function leftPad(string, length = 20) {
+    return `-> ${' '.repeat(length - string.length)}${string}`;
+  }
+
+  console.log(leftPad(frat));
+  console.log(leftPad(house));
+  console.log(leftPad(bike));
+  </script>
+
+</body>
+</html>

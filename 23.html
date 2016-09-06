@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>23</title>
+</head>
+
+<body>
+
+  <div class="bio"></div>
+
+  <!-- Code here! -->
+  <script>
+
+  const tacoBell = ['Bean Burrito', 'Burrito Supreme', 'Beef and Potato Quarter Pounder', 'Grilled Stuffit'];
+
+  // Regular for loop
+  for (let i = 0; i < tacoBell.length; i++) {
+    console.log(tacoBell[i]);
+  }
+
+  //forEach on array
+  tacoBell.forEach((burrito) => {
+    console.log(burrito);
+    // if(burrito.beginsWith('Bean')) {
+    //   break;
+    // }
+  });
+
+  // for in loop
+  for (const index in tacoBell) {
+    console.log(tacoBell[index]);
+  }
+
+  </script>
+
+</body>
+</html>

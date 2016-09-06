@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>19</title>
+</head>
+
+<body>
+
+  <div class="bio"></div>
+
+  <!-- Code here! -->
+  <script>
+  const max = {
+    first: 'Max',
+    last: 'Goldberg',
+    city: 'Providence',
+    nickname: 'Cheese',
+    birthday: {
+      month: 'September',
+      day: 30,
+      year: 1990,
+      place: {
+        city: 'Washington D.C.',
+        state: 'N/A'
+      }
+    }
+  };
+
+  // Make two new const, first and last, derived from const max
+  const { first, last } = max;
+
+  // destructure from nested data
+  const { month, year } = max.birthday;
+
+  // Renaming when assigning destructured variables
+  const { city:homeTown, state:homeState } = max.birthday.place;
+
+  // default values with destructuring
+  const settings = { color: 'green', height: 200 };
+  const { width = 100 , height, color, font = 'arial' } = settings;
+
+  // Renaming with default values
+  const { canine:dog = 'fido', hair:fur = 'black'} = { canine: 'scuppers' };
+
+  </script>
+
+</body>
+</html>

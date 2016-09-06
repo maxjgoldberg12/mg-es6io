@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>20</title>
+</head>
+
+<body>
+
+  <div class="bio"></div>
+
+  <!-- Code here! -->
+  <script>
+
+  const data = [119, 'smyth', 'zagster.com'];
+
+  // destructure from an array
+  const [id, name, url] = data;
+
+  const info = 'Max,Football,1990,Tulsa,Providence';
+
+  const[firstName, sport, year, hometown] = info.split(',');
+
+  const team = ['max', 'kate', 'joe', 'maddy', 'steveo'];
+
+  // ... puts the rest of the array into players
+  const [captain, doctor, ...players] = team;
+
+  
+
+  </script>
+
+</body>
+</html>

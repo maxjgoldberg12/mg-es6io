@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>22</title>
+</head>
+
+<body>
+
+  <div class="bio"></div>
+
+  <!-- Code here! -->
+  <script>
+
+  function convertCurrency(amount) {
+    const converted = {
+      USD: amount * 0.76,
+      GBP: amount* 0.53,
+      AUD: amount * 1.01
+    };
+    return converted;
+  }
+
+  console.log(convertCurrency(100))
+
+  const { USD, GBP } = convertCurrency(100);
+  console.log(USD, GBP);
+
+  // use = {] to allow for all arguments to use default values
+  function tipCalculator({ total = 10, tip = 0.15, tax = 0.12 } = {}) {
+    return total + (total * tip) + (total * tax);
+  }
+
+  const bill = tipCalculator();
+  console.log(bill);
+
+  </script>
+
+</body>
+</html>

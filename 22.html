@@ -27,7 +27,7 @@
   const { USD, GBP } = convertCurrency(100);
   console.log(USD, GBP);
 
-  // use = {] to allow for all arguments to use default values
+  // use = {} to allow for all arguments to use default values
   function tipCalculator({ total = 10, tip = 0.15, tax = 0.12 } = {}) {
     return total + (total * tip) + (total * tax);
   }

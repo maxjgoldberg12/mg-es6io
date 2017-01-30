@@ -13,7 +13,8 @@
   <!-- Code here! -->
   <script>
 
-  const tacoBell = ['Bean Burrito', 'Burrito Supreme', 'Beef and Potato Quarter Pounder', 'Grilled Stuffit'];
+  const tacoBell = ['Bean Burrito', 'Burrito Supreme',
+   'Beef and Potato Quarter Pounder', 'Grilled Stuffit'];
 
   // Regular for loop
   for (let i = 0; i < tacoBell.length; i++) {
@@ -32,6 +33,12 @@
   for (const index in tacoBell) {
     console.log(tacoBell[index]);
   }
+
+  // for of loop
+  for (const item of tacoBell) {
+    console.log(tacoBell[item]);
+  }
+
 
   </script>
 
